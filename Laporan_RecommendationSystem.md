@@ -58,9 +58,12 @@ Dataset yang digunakan merupakan dataset film dari Kaggle yang terdiri dari 24 v
 (Variabel lainnya seperti budget, revenue, runtime, homepage, dll tidak digunakan dalam model ini.)
 
 ### Exploratory Data Analysis (EDA):
-- Data kategori seperti 'genres', 'cast', 'keywords' diperiksa distribusinya.
-- Data numerik (vote count, vote average) divisualisasikan distribusinya.
-- Tidak ada missing value kritikal pada fitur yang dipilih.
+- Melihat bentuk dataset dan tipe data pada dataset
+  Terdiri dari 24 variabel dan 4803 data film. Tipe data berupa kategorikal dan numerikal.
+- Melihat apakah ada missing value
+  Ditemukan beberapa variabel yang memilki missing value dan akan ditangani di Data Preparation
+- Melihat distribusi data pada dataset
+  Dilakukan Univariate Data Analysis terhadap variabel kategorikal dan numerikal.
 
 ## Data Preparation
 
@@ -93,7 +96,7 @@ Rekomendasi film mirip dengan 'The Godfather':
 
 ## Evaluation
 
-Evaluasi dilakukan menggunakan **Precision@K**, yaitu persentase rekomendasi yang relevan dari Top-K hasil rekomendasi berdasarkan genre.
+Evaluasi dilakukan menggunakan metrik **Recommender System Precision**, yaitu persentase rekomendasi yang relevan dari Top-K hasil rekomendasi berdasarkan genre.
 
 Contoh Evaluasi Precision@10 untuk "The Dark Knight":
 
