@@ -21,8 +21,6 @@ Menurut Ricci et al. (2011), sistem rekomendasi memiliki peranan penting dalam m
 ### Solution Approach
 1. **Content-Based Filtering** (diimplementasikan):
    - Menggunakan informasi dari film itu sendiri seperti genre, kata kunci, pemain, dan sutradara.
-2. **Collaborative Filtering** (opsional — tidak diimplementasikan):
-   - Menggunakan data interaksi pengguna lain (seperti rating atau penilaian film), yang belum diterapkan dalam proyek ini karena keterbatasan data eksplisit dari pengguna.
 
 ## Data Understanding
 
