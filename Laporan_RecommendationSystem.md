@@ -15,7 +15,7 @@ Menurut Ricci et al. (2011), sistem rekomendasi memiliki peranan penting dalam m
 - Bagaimana membangun sistem rekomendasi yang mampu merekomendasikan film berbasis kesamaan konten seperti genre, aktor, dan sutradara?
 
 ### Goals
-- Membangun **sistem rekomendasi film Content-Based Filtering** yang dapat menyarankan film berdasarkan kesamaan fitur konten film (genre, keywords, cast, sutradara).
+- Membangun **sistem rekomendasi film Content-Based Filtering** yang dapat menyarankan film berdasarkan kesamaan fitur konten film (genre, keywords, cast, director).
 - Mengurangi waktu pencarian pengguna dalam menemukan film baru yang sesuai dengan preferensi film favorit mereka.
 
 ### Solution Approach
@@ -24,18 +24,36 @@ Menurut Ricci et al. (2011), sistem rekomendasi memiliki peranan penting dalam m
 
 ## Data Understanding
 
-Dataset yang digunakan merupakan dataset film dari TMDB yang terdiri dari 24 variabel dan 4803 data film. Dataset ini memuat informasi seperti genre, kata kunci, sinopsis, sutradara, pemeran, tanggal rilis, popularitas, dll.
+Dataset yang digunakan merupakan dataset film dari Kaggle yang terdiri dari 24 variabel dan 4803 data film. Dataset ini memuat informasi seperti genre, keywords, sinopsis, sutradara, pemeran, tanggal rilis, popularitas, dll.
 
 ### Sumber Data:
-https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+[https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata](https://www.kaggle.com/datasets/abdallahwagih/movies)
 
 ### Variabel:
-- genres: Daftar genre film.
-- keywords: Kata kunci terkait film.
-- tagline: Slogan film.
-- title: Judul film.
-- cast: Daftar aktor utama.
-- director: Sutradara film.
+* `index`: Indeks baris (tidak relevan secara analitis, hanya penomoran)
+* `budget`: Anggaran produksi film (dalam satuan USD)
+* `genres`: Daftar genre film (misalnya: Action, Comedy)
+* `homepage`: URL homepage resmi film
+* `id`: ID unik film (biasanya dari TMDB)
+* `keywords`: Kata kunci terkait film (tag-topik relevan)
+* `original_language`: Bahasa asli film (misalnya: en, fr)
+* `original_title`: Judul asli film dalam bahasa produksinya
+* `overview`: Ringkasan atau deskripsi singkat alur cerita film
+* `popularity`: Skor popularitas film (dihitung oleh TMDB berdasarkan beberapa faktor)
+* `production_companies`: Daftar perusahaan produksi yang terlibat
+* `production_countries`: Daftar negara tempat film diproduksi
+* `release_date`: Tanggal rilis film
+* `revenue`: Total pendapatan kotor film (dalam USD)
+* `runtime`: Durasi film (dalam menit)
+* `spoken_languages`: Bahasa-bahasa yang digunakan dalam film
+* `status`: Status rilis film (misalnya: Released, Post Production)
+* `tagline`: Slogan atau kalimat promosi film
+* `title`: Judul film (dalam format publik)
+* `vote_average`: Rata-rata skor penilaian dari pengguna TMDB
+* `vote_count`: Jumlah total suara/penilaian yang diberikan pengguna
+* `cast`: Daftar aktor/aktris utama yang membintangi film
+* `crew`: Daftar tim kru produksi (editor, penulis, dll)
+* `director`: Nama sutradara film
 
 (Variabel lainnya seperti budget, revenue, runtime, homepage, dll tidak digunakan dalam model ini.)
 
