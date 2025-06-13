@@ -102,7 +102,7 @@ Rekomendasi film mirip dengan 'The Godfather':
 
 Evaluasi dilakukan menggunakan metrik **Recommender System Precision**, yaitu persentase rekomendasi yang relevan dari Top-K hasil rekomendasi berdasarkan genre.
 
-Contoh Evaluasi Precision@10 untuk "The Godfather":
+Contoh Evaluasi Recommender System Precision untuk "The Godfather":
 
 | Judul Film             | Genre                       | Relevansi |
 |-----------------------|----------------------------|-----------|
@@ -117,7 +117,7 @@ Contoh Evaluasi Precision@10 untuk "The Godfather":
 | American Graffiti     | Comedy Drama               | Relevan   |
 | Love Actually         | Comedy Romance Drama       | Relevan   |
 
-**Precision@10: 100.00% (10/10 film relevan)**
+***Recommender System Precision: 100.00% (10/10 film relevan)**
 
 Formula yang digunakan:
 
