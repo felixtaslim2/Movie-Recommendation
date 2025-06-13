@@ -68,7 +68,7 @@ Dataset yang digunakan merupakan dataset film dari Kaggle yang terdiri dari 24 v
 ## Data Preparation
 
 Tahapan data preparation meliputi:
-1. **Seleksi fitur**: Dipilih fitur `genres`, `keywords`, `tagline`, `title`, `cast`, `director` untuk sistem rekomendasi.
+1. **Seleksi fitur**: Dipilih fitur `genres`, `keywords`, `cast`, `director` untuk sistem rekomendasi.
 2. **Handling missing values**: Missing values diisi string kosong ('') untuk teks agar dapat diproses TF-IDF.
 3. **Fitur gabungan**: Semua fitur digabung menjadi satu string.
 
@@ -83,32 +83,39 @@ Pada Modeling and Result berikut adalah tahapan yang dilakukan:
 
 Contoh output rekomendasi (Top-10 Recommendation):
 
-Masukkan judul film: The Godfather
+Masukkan judul film: Godfather
 
 Rekomendasi film mirip dengan 'The Godfather':
 
-1. The Godfather: Part II
-2. The Godfather: Part III
-3. Scarface
-4. Goodfellas
-5. Casino
-6. A Bronx Tale
-7. Donnie Brasco
-8. Carlito's Way
-9. American Gangster
-10. Heat
+1. The Godfather: Part III
+2. The Godfather: Part II
+3. Apocalypse Now
+4. Closer
+5. August Rush
+6. West Side Story
+7. Stomp the Yard
+8. Leaving Las Vegas
+9. American Graffiti
+10. Love Actually
 
 ## Evaluation
 
 Evaluasi dilakukan menggunakan metrik **Recommender System Precision**, yaitu persentase rekomendasi yang relevan dari Top-K hasil rekomendasi berdasarkan genre.
 
-Contoh Evaluasi Precision@10 untuk "The Dark Knight":
+Contoh Evaluasi Precision@10 untuk "The Godfather":
 
-| Judul Film            | Genre                           | Relevansi     |
-|---------------------|----------------------------------|--------------|
-| Batman Begins        | Action Adventure Crime           | Relevan      |
-| Man of Steel         | Action Adventure Sci-Fi          | Relevan      |
-| ...                 | ...                              | ...          |
+| Judul Film             | Genre                       | Relevansi |
+|-----------------------|----------------------------|-----------|
+| The Godfather: Part III| Crime Drama Thriller        | Relevan   |
+| The Godfather: Part II | Drama Crime                | Relevan   |
+| Apocalypse Now        | Drama War                  | Relevan   |
+| Closer                | Drama Romance              | Relevan   |
+| August Rush           | Drama                      | Relevan   |
+| West Side Story       | Crime Drama Music          | Relevan   |
+| Stomp the Yard        | Drama Music                | Relevan   |
+| Leaving Las Vegas     | Drama Romance              | Relevan   |
+| American Graffiti     | Comedy Drama               | Relevan   |
+| Love Actually         | Comedy Romance Drama       | Relevan   |
 
 **Precision@10: 100.00% (10/10 film relevan)**
 
