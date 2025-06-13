@@ -27,7 +27,7 @@ Menurut Ricci et al. (2011), sistem rekomendasi memiliki peranan penting dalam m
 Dataset yang digunakan merupakan dataset film dari Kaggle yang terdiri dari 24 variabel dan 4803 data film. Dataset ini memuat informasi seperti genre, keywords, sinopsis, sutradara, pemeran, tanggal rilis, popularitas, dll.
 
 ### Sumber Data:
-[https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata](https://www.kaggle.com/datasets/abdallahwagih/movies)
+[https://www.kaggle.com/datasets/abdallahwagih/movies](https://www.kaggle.com/datasets/abdallahwagih/movies)
 
 ### Variabel:
 * `index`: Indeks baris (tidak relevan secara analitis, hanya penomoran)
