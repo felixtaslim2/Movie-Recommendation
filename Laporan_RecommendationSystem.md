@@ -71,15 +71,15 @@ Tahapan data preparation meliputi:
 1. **Seleksi fitur**: Dipilih fitur `genres`, `keywords`, `cast`, `director` untuk sistem rekomendasi.
 2. **Handling missing values**: Missing values diisi string kosong ('') untuk teks agar dapat diproses TF-IDF.
 3. **Fitur gabungan**: Semua fitur digabung menjadi satu string.
+4. **Vectorization**: Digunakan TF-IDF Vectorizer dari Sklearn.
 
 ## Modeling and Result
 
 Sistem rekomendasi menggunakan metode Content-Based Filtering berbasis TF-IDF dan Cosine Similarity. Cosine Similarity digunakan untuk mengukur kemiripan antar film.
 
 Pada Modeling and Result berikut adalah tahapan yang dilakukan:
-1. **Vectorization**: Digunakan TF-IDF Vectorizer dari Sklearn.
-2. **Cosine Similarity**: Digunakan cosine_similarity dari Sklearn.
-3. **Inference**
+1. **Cosine Similarity**: Digunakan cosine_similarity dari Sklearn.
+2. **Inference**
 
 Contoh output rekomendasi (Top-10 Recommendation):
 
