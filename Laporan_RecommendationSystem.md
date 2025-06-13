@@ -15,7 +15,7 @@ Menurut Ricci et al. (2011), sistem rekomendasi memiliki peranan penting dalam m
 - Bagaimana membangun sistem rekomendasi yang mampu merekomendasikan film berbasis kesamaan konten seperti genre, aktor, dan sutradara?
 
 ### Goals
-- Membangun **sistem rekomendasi film Content-Based Filtering** yang dapat menyarankan film berdasarkan kesamaan fitur konten film (genre, keywords, cast, director).
+- Membangun **sistem rekomendasi film Content-Based Filtering** yang dapat menyarankan film berdasarkan kesamaan fitur konten film terutama genre (genre, keywords, cast, director).
 - Mengurangi waktu pencarian pengguna dalam menemukan film baru yang sesuai dengan preferensi film favorit mereka.
 
 ### Solution Approach
@@ -71,11 +71,15 @@ Tahapan data preparation meliputi:
 1. **Seleksi fitur**: Dipilih fitur `genres`, `keywords`, `tagline`, `title`, `cast`, `director` untuk sistem rekomendasi.
 2. **Handling missing values**: Missing values diisi string kosong ('') untuk teks agar dapat diproses TF-IDF.
 3. **Fitur gabungan**: Semua fitur digabung menjadi satu string.
-4. **Vectorization**: Digunakan TF-IDF Vectorizer.
 
 ## Modeling and Result
 
 Sistem rekomendasi menggunakan metode Content-Based Filtering berbasis TF-IDF dan Cosine Similarity. Cosine Similarity digunakan untuk mengukur kemiripan antar film.
+
+Pada Modeling and Result berikut adalah tahapan yang dilakukan:
+1. **Vectorization**: Digunakan TF-IDF Vectorizer dari Sklearn.
+2. **Cosine Similarity**: Digunakan cosine_similarity dari Sklearn.
+3. **Inference**
 
 Contoh output rekomendasi (Top-10 Recommendation):
 
@@ -110,9 +114,11 @@ Contoh Evaluasi Precision@10 untuk "The Dark Knight":
 
 Formula yang digunakan:
 
-Precision@K = (Jumlah item relevan) / (Jumlah item direkomendasikan)
+Recommender System Precision = (Jumlah item relevan) / (Jumlah item direkomendasikan)
 
 Karena proyek ini tidak melibatkan data eksplisit interaksi pengguna, metrik seperti RMSE atau F1-score tidak digunakan.
+
+Dengan hasil Recommender System Precision ini, kita bisa mengetahui bahwa sistem rekomendasi ini dapat digunakan untuk menyarankan film berdasarkan kesamaan fitur konten film dan tentunya akan mengurangi waktu pencarian pengguna dalam menemukan film baru yang sesuai dengan preferensi film favorit mereka.
 
 ## Referensi
 
